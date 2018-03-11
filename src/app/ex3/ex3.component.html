@@ -1,0 +1,22 @@
+<table>
+  <th>Name</th>
+  <th>Age</th>
+  <th>City</th>
+  <tr *ngFor='let p of persons'>
+    <td>{{ p.Name }}</td>
+    <td>{{ p.Age }}</td>
+    <td>{{ p.City }}</td>
+  </tr>
+</table>
+
+<div class="outer">
+  <ol *ngFor="let p of persons"
+    class="outer">
+    <li>{{ p.Name }}
+      <ol class="inner">
+        <li>{{ p.Age }}</li>
+        <li>{{ p.City }}</li>
+      </ol>
+    </li>
+  </ol>
+</div>

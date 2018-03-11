@@ -1,0 +1,20 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+div.outer {
+    counter-reset: item;
+}
+
+ol.outer {
+    list-style-type: disc;
+}
+
+ol.inner {
+    list-style-type: none;
+}
+
+ol.inner > li::before {
+  counter-increment: item;            
+  content: counter(item, upper-roman) ". ";   
+}

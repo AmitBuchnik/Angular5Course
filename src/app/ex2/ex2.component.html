@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="text1" (keyup)="checkText3(txt3.value)" />
+<br/>
+<br/>
+<input type="text" [(ngModel)]="text2" (keyup)="checkText3(txt3.value)" />
+<br/>
+<br/>
+<input #txt3 type="text" [value]="text1 + text2" />
