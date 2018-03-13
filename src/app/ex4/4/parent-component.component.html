@@ -1,0 +1,14 @@
+First Name:
+<input type="text" #fName (keyup)="firstName=fName.value" />
+<br/> Last Name:
+<input type="text" #lName (keyup)="lastName=lName.value" />
+<br/> City:
+<select #sCity (change)="city=sCity.value">
+  <option>Tel Aviv</option>
+  <option>Netanya</option>
+  <option>Haifa</option>
+</select>
+
+<input type="button" value="" value="Add" (click)="add()" />
+<br/>
+<app-child-component-4 [person]="person"></app-child-component-4>

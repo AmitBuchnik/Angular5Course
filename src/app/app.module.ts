@@ -9,8 +9,8 @@ import { Ex2Component } from './ex2/ex2.component';
 import { GrandsonCompComponent } from './ex4/1/grandson-comp.component';
 import { ChildCompComponent } from './ex4/1/child-comp.component';
 import { ParentCompComponent } from './ex4/1/parent-comp.component';
-import { ParentComponentComponent } from './ex4/2/parent-component.component';
-import { ChildComponentComponent } from './ex4/2/child-component.component';
+import { ParentComponentComponent4 } from './ex4/4/parent-component.component';
+import { ChildComponentComponent4 } from './ex4/4/child-component.component';
 
 
 @NgModule({
@@ -21,8 +21,8 @@ import { ChildComponentComponent } from './ex4/2/child-component.component';
     GrandsonCompComponent,
     ChildCompComponent,
     ParentCompComponent,
-    ParentComponentComponent,
-    ChildComponentComponent
+    ParentComponentComponent4,
+    ChildComponentComponent4
   ],
   imports: [
     BrowserModule,

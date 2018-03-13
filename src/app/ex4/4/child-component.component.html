@@ -1,0 +1,12 @@
+<div style="background-color: yellow; border: 1px solid black;" *ngFor="let person of persons">
+  First Name:
+  <input type="text" [value]="person.firstName" />
+  <br/> Last Name:
+  <input type="text" [value]="person.lastName" />
+  <br/> City:
+  <select [value]="person.city">
+  <option>Tel Aviv</option>
+  <option>Netanya</option>
+  <option>Haifa</option>
+</select>
+</div>

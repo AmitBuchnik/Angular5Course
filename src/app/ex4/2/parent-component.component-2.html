@@ -7,5 +7,9 @@
 <input type="checkbox" [(ngModel)]="isDrivingLicense" name="" id="">Has driving license ?
 <br/>
 <br/>
-<app-child-component [name]="name" [age]="age" [isDrivingLicense]="isDrivingLicense">
+<span>Text from child: {{ textFromChild }}</span>
+<br/>
+<br/>
+<app-child-component [name]="name" [age]="age"
+ [isDrivingLicense]="isDrivingLicense" (notify)="getTextFromChild($event)">
 </app-child-component>
