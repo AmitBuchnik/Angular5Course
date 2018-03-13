@@ -26,7 +26,7 @@ export class ParentComponentComponent4 implements OnInit {
     this.person = {
       firstName: this.firstName,
       lastName: this.lastName,
-      city: this.firstName
+      city: this.city
     }
   }
 }
