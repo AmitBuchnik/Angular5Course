@@ -1,0 +1,11 @@
+<label for="name">Name:</label>
+<input type="text" [(ngModel)]="name" name="" id="name">
+<br/>
+<label for="age">Age:</label>
+<input type="text" [(ngModel)]="age" name="" id="age">
+<br/>
+<input type="checkbox" [(ngModel)]="isDrivingLicense" name="" id="">Has driving license ?
+<br/>
+<br/>
+<app-child-component [name]="name" [age]="age" [isDrivingLicense]="isDrivingLicense">
+</app-child-component>
