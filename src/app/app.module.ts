@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,13 @@ import { ChildCompComponent } from './ex4/1/child-comp.component';
 import { ParentCompComponent } from './ex4/1/parent-comp.component';
 import { ParentComponentComponent4 } from './ex4/4/parent-component.component';
 import { ChildComponentComponent4 } from './ex4/4/child-component.component';
+import { VehicleService } from './vehicle.service';
+import { VehicleClientComponent } from './vehicle-client/vehicle-client.component';
+import { VehiclesInfoService } from './vehicles-info.service';
+import { VehiclesInfoFormattedService } from './vehicles-info-formatted.service';
+import { VehicleTypesFormattedClientComponent } from './vehicle-types-formatted-client/vehicle-types-formatted-client.component';
+import { PostsclientComponent } from './postsclient/postsclient.component';
+import { PostsService } from './posts.service';
 
 
 @NgModule({
@@ -22,13 +30,22 @@ import { ChildComponentComponent4 } from './ex4/4/child-component.component';
     ChildCompComponent,
     ParentCompComponent,
     ParentComponentComponent4,
-    ChildComponentComponent4
+    ChildComponentComponent4,
+    VehicleClientComponent,
+    VehicleTypesFormattedClientComponent,
+    PostsclientComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    VehicleService,
+    VehiclesInfoService,
+    VehiclesInfoFormattedService,
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
