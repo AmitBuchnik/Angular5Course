@@ -1,0 +1,6 @@
+<input type="range" #slider min="15" max="60" [(ngModel)]="sliderValue" (change)="age=slider.value"> 
+{{ age }}
+
+<ul>
+  <li *ngFor="let p of persons | sliderpipe : age">{{ p.name }}</li>
+</ul>

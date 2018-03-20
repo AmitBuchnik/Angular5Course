@@ -22,6 +22,8 @@ import { DalService } from './dal.service';
 import { FormExampleComponent } from './form-example/form-example.component';
 import { UsersComponent } from './users/users.component';
 import { ReverseStringPipe } from './reverse-string.pipe';
+import { SliderComponent } from './slider/slider.component';
+import { SliderpipePipe } from './sliderpipe.pipe';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ReverseStringPipe } from './reverse-string.pipe';
     PostsclientComponent,
     FormExampleComponent,
     UsersComponent,
-    ReverseStringPipe
+    ReverseStringPipe,
+    SliderComponent,
+    SliderpipePipe
   ],
   imports: [
     BrowserModule,
