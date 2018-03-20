@@ -4,12 +4,11 @@ import 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class PostsService {
-  url: string = "https://jsonplaceholder.typicode.com/posts";
+export class DalService {
 
   constructor(private http: Http) { }
 
-  getTitles() {
-    return this.http.get(this.url).map((res: Response) => res.json());
+  getData(url: string) {
+    return this.http.get(url).map((res: Response) => res.json());
   }
 }

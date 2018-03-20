@@ -1,0 +1,15 @@
+<form #f="ngForm" (ngSubmit)="submit(f.valid)">
+  Name:
+  <input type="text" name="Name" [(ngModel)]="person.Name" required>
+  <br> Age:
+  <input type="text" name="Age" [(ngModel)]="person.Age" minlength="3">
+  <br> Adult:
+  <input type="checkbox" name="Adult" [(ngModel)]="person.Adult">
+  <br> City:
+  <select name="City" [(ngModel)]="person.City">
+    <option>Tel Aviv</option>
+    <option>Ashdod</option>
+    <option>Netanya</option>
+  </select>
+  <input type="submit" value="Send" [disabled]="!f.valid">
+</form>

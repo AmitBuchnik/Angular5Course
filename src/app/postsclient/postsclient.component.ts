@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PostsService } from '../posts.service';
+import { DalService } from '../dal.service';
 
 @Component({
   selector: 'app-postsclient',
@@ -8,11 +8,12 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./postsclient.component.css']
 })
 export class PostsclientComponent implements OnInit {
+  url: string = "https://jsonplaceholder.typicode.com/posts";  
   posts: string[];
 
-  constructor(private service: PostsService) { }
+  constructor(private service: DalService) { }
 
   ngOnInit() {
-    this.service.getTitles().subscribe(data => this.posts = data);
+    this.service.getData(this.url).subscribe(data => this.posts = data);
   }
 }

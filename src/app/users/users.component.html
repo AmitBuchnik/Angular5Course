@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="send(userName.dirty || userEmail.dirty)">
+  Id:
+  <input type="text" #id name="id">
+  <input type="button" value="Load" (click)="loadUser(+id.value)">
+  <br>
+  <br> Name:
+  <input type="text" #userName="ngModel" name="userName" [(ngModel)]="user.username" required>
+  <h3 *ngIf="userName.invalid && userName.errors.required && userName.dirty">User name is mandatory</h3>
+  <br> Email:
+  <input type="text" #userEmail="ngModel" name="userEmail" [(ngModel)]="user.email" required>
+  <h3 *ngIf="userEmail.invalid && userEmail.errors.required && userEmail.dirty">Email is mandatory</h3>
+  <br>
+  <br>
+  {{ text | reverseString}}
+  <br>
+  <input type="submit" value="Send" [disabled]="!f.valid">
+</form>

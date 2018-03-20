@@ -18,7 +18,10 @@ import { VehiclesInfoService } from './vehicles-info.service';
 import { VehiclesInfoFormattedService } from './vehicles-info-formatted.service';
 import { VehicleTypesFormattedClientComponent } from './vehicle-types-formatted-client/vehicle-types-formatted-client.component';
 import { PostsclientComponent } from './postsclient/postsclient.component';
-import { PostsService } from './posts.service';
+import { DalService } from './dal.service';
+import { FormExampleComponent } from './form-example/form-example.component';
+import { UsersComponent } from './users/users.component';
+import { ReverseStringPipe } from './reverse-string.pipe';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { PostsService } from './posts.service';
     ChildComponentComponent4,
     VehicleClientComponent,
     VehicleTypesFormattedClientComponent,
-    PostsclientComponent
+    PostsclientComponent,
+    FormExampleComponent,
+    UsersComponent,
+    ReverseStringPipe
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,7 @@ import { PostsService } from './posts.service';
     VehicleService,
     VehiclesInfoService,
     VehiclesInfoFormattedService,
-    PostsService
+    DalService
   ],
   bootstrap: [AppComponent]
 })
