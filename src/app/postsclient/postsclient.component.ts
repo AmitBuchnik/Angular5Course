@@ -8,11 +8,11 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./postsclient.component.css']
 })
 export class PostsclientComponent implements OnInit {
-  titles: string[];
+  posts: string[];
 
   constructor(private service: PostsService) { }
 
   ngOnInit() {
-    this.service.getTitles().subscribe(data => this.titles = data);
+    this.service.getTitles().subscribe(data => this.posts = data);
   }
 }
