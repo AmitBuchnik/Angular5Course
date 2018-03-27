@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
-  age: number = 0;
+  age: number = 30;
 
   persons: any[] = [
     { 'name': 'Avi', 'age': 30 },

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { Ex3Component } from './ex3/ex3.component';
@@ -24,7 +24,29 @@ import { UsersComponent } from './users/users.component';
 import { ReverseStringPipe } from './reverse-string.pipe';
 import { SliderComponent } from './slider/slider.component';
 import { SliderpipePipe } from './sliderpipe.pipe';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { SpapageComponent } from './spapage/spapage.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 
+const appRoutes: Routes = [
+  {
+    path: 'view1/:id/:name', component: Comp1Component,
+    children: [
+      { path: 'view3', component: Comp3Component },
+      { path: 'view4', component: Comp4Component }
+    ]
+  },
+  {
+    path: 'view1', component: Comp1Component,
+    children: [
+      { path: 'view3', component: Comp3Component },
+      { path: 'view4', component: Comp4Component }
+    ]
+  },
+  { path: 'view2', component: Comp2Component }
+];
 
 @NgModule({
   declarations: [
@@ -43,12 +65,18 @@ import { SliderpipePipe } from './sliderpipe.pipe';
     UsersComponent,
     ReverseStringPipe,
     SliderComponent,
-    SliderpipePipe
+    SliderpipePipe,
+    Comp1Component,
+    Comp2Component,
+    SpapageComponent,
+    Comp3Component,
+    Comp4Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     VehicleService,

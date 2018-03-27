@@ -1,0 +1,9 @@
+<input type="text" #txt name="" id="" (keyup)="id=txt.value">
+
+<nav>
+  <a [routerLink]="['/view1', id, 'amit']">View 1</a>
+  <br>
+  <a routerLink="/view2">View 2</a>
+</nav>
+
+<router-outlet></router-outlet>
